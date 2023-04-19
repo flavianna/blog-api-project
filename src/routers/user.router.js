@@ -16,7 +16,7 @@ routerUser.post(
     emailValidation,
     emailExistsCheck,
     passwordValidation,
-    userController.userToCreate
+    userController.userToCreate,
 );
 
 module.exports = routerUser;
