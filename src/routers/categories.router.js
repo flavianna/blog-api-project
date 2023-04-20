@@ -5,6 +5,7 @@ const checkAuthToken = require('../middlewares/validateToken');
 
 const routerCategories = express.Router();
 
-routerCategories.post('/', checkAuthToken, validateName, categoriesController.categorie);
+routerCategories.post('/', checkAuthToken, validateName, categoriesController.CreatCategorie);
+routerCategories.get('/', checkAuthToken, categoriesController.findAllCategories);
 
 module.exports = routerCategories;
