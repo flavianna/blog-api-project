@@ -5,6 +5,8 @@ const {
     emailExistsCheck,
     passwordValidation,
 } = require('../middlewares/validateUser');
+const checkAuthToken = require('../middlewares/validateToken');
+
 
 const { userController } = require('../controller');
 
@@ -18,5 +20,7 @@ routerUser.post(
     passwordValidation,
     userController.userToCreate,
 );
+
+routerUser.get('/', checkAuthToken, userController.findAll);
 
 module.exports = routerUser;

@@ -1,4 +1,4 @@
-const authenticate = require('../utils/auth');
+const { authenticate } = require('../utils/auth');
 
 const Login = async (req, res) => {
     const { email } = req.body;
