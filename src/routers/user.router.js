@@ -21,5 +21,6 @@ routerUser.post(
 );
 
 routerUser.get('/', checkAuthToken, userController.findAll);
+routerUser.get('/:id', checkAuthToken, userController.getById);
 
 module.exports = routerUser;
