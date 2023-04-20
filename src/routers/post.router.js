@@ -4,7 +4,7 @@ const checkAuthToken = require('../middlewares/validateToken');
 const { validatePostFields, validateCategoryIds } = require('../middlewares/validatePost');
 
 const routerPost = express.Router();
-const validations = [checkAuthToken, validatePostFields, validateCategoryIds,];
+const validations = [checkAuthToken, validatePostFields, validateCategoryIds];
 
 routerPost.post('/', checkAuthToken, validations, postController.createPost);
 
