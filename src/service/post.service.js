@@ -9,7 +9,7 @@ const createNewPost = async ({ title, content, categoryIds }, userEmail) => {
 
     const postCategories = categories.map((category) => ({
         postId: post.id,
-        categoryId: category.id
+        categoryId: category.id,
     }));
     await PostCategory.bulkCreate(postCategories);
 
